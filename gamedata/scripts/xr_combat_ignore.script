@@ -1,7 +1,7 @@
 --[[
 	scheme_type: generic
 	author: Stohe
-	modified_by: Alundaio
+	modified_by: Alundaio, Mora145
 --]]
 
 fighting_with_actor_npcs = {}
