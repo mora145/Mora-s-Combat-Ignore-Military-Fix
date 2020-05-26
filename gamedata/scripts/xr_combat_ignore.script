@@ -216,7 +216,7 @@ function is_enemy(obj,enemy,no_memory)
 		
 		if (((comm == "army" and ene_comm == "stalker") or (comm == "stalker" and ene_comm == "army")) and not is_actor and level.name() == "l01_escape") then 
 			-- In Cordon prevent stalker v military combat with distances greater than 20m
-			if (pos1:distance_to_sqr(pos2) <= 400 or obj.health < 0.9) then
+			if (pos1:distance_to_sqr(pos2) <= 400 or IsWounded(obj) ~= "true") then
 				return true
 				else if (obj:mental_state() == anim.danger and pos1:distance_to_sqr(pos2) <= 6500) then
 					return true	
@@ -230,7 +230,7 @@ function is_enemy(obj,enemy,no_memory)
 	 
 		if (is_actor and comm == "army" and character_community(db.actor) == "actor_stalker") then  
         	-- Is actor and I a army
-			if (pos1:distance_to_sqr(pos2) <=100 or obj.health < 0.9) then
+			if (pos1:distance_to_sqr(pos2) <=100 or IsWounded(obj) ~= "true") then
 				-- The actor is less than 10m
     			return true 
             	else if (obj:mental_state() == anim.danger and pos1:distance_to_sqr(pos2) <= 10000) then
