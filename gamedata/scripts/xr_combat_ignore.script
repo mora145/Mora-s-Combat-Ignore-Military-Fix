@@ -233,8 +233,13 @@ function is_enemy(obj,enemy,no_memory)
 			if (pos1:distance_to_sqr(pos2) <=100 or IsWounded(obj) ~= "true") then
 				-- The actor is less than 10m
     			return true 
+<<<<<<< HEAD
             	else if (obj:mental_state() == anim.danger and pos1:distance_to_sqr(pos2) <= 10000) then
     					--If the player does something stupid, the military will follow him to 100m. After that, they'll ignore him. 
+=======
+            	else if (obj:mental_state() == anim.danger and pos1:distance_to_sqr(pos2) <= 14500 and comm == "army") then
+    					--If the player does something stupid, the military will follow him to 120m. After that, they'll ignore him. 
+>>>>>>> parent of a83b222... Update xr_combat_ignore.script
     			    return true
 			    end
 			return false
